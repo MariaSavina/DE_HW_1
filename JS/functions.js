@@ -59,83 +59,83 @@ function getDistance(ax=0, ay=0, az=0, bx=0, by=0, bz=0){
 
 /// 3 ///
 
-function getStrNum(num){
-  if(num>999 || num<0){
-    return 'your number not in diapason'
-  }
-  else if(num == 0){
-    return 'ноль'
-  }
-  else{
-    var a= String(num)
-    var res = ''
-    if(a.length < 3){
-        var i = 0
-        while(a.length <3){
-            a='0'+a
-            i++
-        }
-    }
+// function getStrNum(num){
+//   if(num>999 || num<0){
+//     return 'your number not in diapason'
+//   }
+//   else if(num == 0){
+//     return 'ноль'
+//   }
+//   else{
+//     var a= String(num)
+//     var res = ''
+//     if(a.length < 3){
+//         var i = 0
+//         while(a.length <3){
+//             a='0'+a
+//             i++
+//         }
+//     }
 
-    switch (a[0])
-    {
-      case '1': res='сто '; break;
-      case '2': res = 'двести '; break;
-      case '3': res = 'триста '; break;
-      case '4': res = 'четыреста '; break;
-      case '5': res = 'пятьсот '; break;
-      case '6': res = 'шестьсот '; break;
-      case '7': res = 'семьсот '; break;
-      case '8': res = 'восемьсот '; break;
-      case '9': res = 'девятьсот '; break;
-      default: break;
-    }
-    if(a[1]==1){
-      switch (a[2])
-      {
-        case '0': res+='десять'; break;
-        case '1': res +='одинадцать'; break;
-        case '2': res += 'двенадцать'; break;
-        case '3': res += 'тринадцать'; break;
-        case '4': res += 'четырнвдцать'; break;
-        case '5': res += 'пятнадцать'; break;
-        case '6': res += 'шестнадцать'; break;
-        case '7': res += 'семнадцать'; break;
-        case '8': res += 'восемнадцать'; break;
-        case '9': res += 'девятнадцать'; break;
-        default: break;
-      }
-    }
-    else{
-      switch (a[1])
-      {
-        case '2': res += 'двадцать '; break;
-        case '3': res += 'тридцать '; break;
-        case '4': res += 'сорок '; break;
-        case '5': res += 'пятьдесят '; break;
-        case '6': res += 'шестьдесят '; break;
-        case '7': res += 'семьдесят '; break;
-        case '8': res += 'восемьдесят '; break;
-        case '9': res += 'девяносто '; break;
-        default: break;
-      }
-      switch (a[2])
-      {
-        case '1': res +='один'; break;
-        case '2': res += 'два'; break;
-        case '3': res += 'три'; break;
-        case '4': res += 'четыре'; break;
-        case '5': res += 'пять'; break;
-        case '6': res += 'шесть'; break;
-        case '7': res += 'семь'; break;
-        case '8': res += 'восемь'; break;
-        case '9': res += 'девять'; break;
-        default: break;
-      }
-    }
-    return res
-  }
-}
+//     switch (a[0])
+//     {
+//       case '1': res='сто '; break;
+//       case '2': res = 'двести '; break;
+//       case '3': res = 'триста '; break;
+//       case '4': res = 'четыреста '; break;
+//       case '5': res = 'пятьсот '; break;
+//       case '6': res = 'шестьсот '; break;
+//       case '7': res = 'семьсот '; break;
+//       case '8': res = 'восемьсот '; break;
+//       case '9': res = 'девятьсот '; break;
+//       default: break;
+//     }
+//     if(a[1]==1){
+//       switch (a[2])
+//       {
+//         case '0': res+='десять'; break;
+//         case '1': res +='одинадцать'; break;
+//         case '2': res += 'двенадцать'; break;
+//         case '3': res += 'тринадцать'; break;
+//         case '4': res += 'четырнвдцать'; break;
+//         case '5': res += 'пятнадцать'; break;
+//         case '6': res += 'шестнадцать'; break;
+//         case '7': res += 'семнадцать'; break;
+//         case '8': res += 'восемнадцать'; break;
+//         case '9': res += 'девятнадцать'; break;
+//         default: break;
+//       }
+//     }
+//     else{
+//       switch (a[1])
+//       {
+//         case '2': res += 'двадцать '; break;
+//         case '3': res += 'тридцать '; break;
+//         case '4': res += 'сорок '; break;
+//         case '5': res += 'пятьдесят '; break;
+//         case '6': res += 'шестьдесят '; break;
+//         case '7': res += 'семьдесят '; break;
+//         case '8': res += 'восемьдесят '; break;
+//         case '9': res += 'девяносто '; break;
+//         default: break;
+//       }
+//       switch (a[2])
+//       {
+//         case '1': res +='один'; break;
+//         case '2': res += 'два'; break;
+//         case '3': res += 'три'; break;
+//         case '4': res += 'четыре'; break;
+//         case '5': res += 'пять'; break;
+//         case '6': res += 'шесть'; break;
+//         case '7': res += 'семь'; break;
+//         case '8': res += 'восемь'; break;
+//         case '9': res += 'девять'; break;
+//         default: break;
+//       }
+//     }
+//     return res
+//   }
+// }
 
 // console.log(getStrNum(123))
 // console.log(getStrNum(23))
@@ -199,145 +199,145 @@ function getStrNum2(num){
 
 /// 4 ///
 
-function getNumFromStr(word){
-    var a = word.split(' ')
-    var b=0
+// function getNumFromStr(word){
+//     var a = word.split(' ')
+//     var b=0
 
-    if(a.length == 3){
-        switch (a[0])
-        {
-            case 'сто': b+=100; break;
-            case 'двести': b+=200; break;
-            case 'триста': b+=300; break;
-            case 'четыреста': b+=400; break;
-            case 'пятьсот': b+=500; break;
-            case 'шестьсот': b+=600; break;
-            case 'семьсот': b+=700; break;
-            case 'восемьсот': b+=800; break;
-            case 'девятьсот': b+=900; break;
-        }
-        switch(a[1])
-        {
-            case 'двадцать': b+=20; break;
-            case 'тридцать': b+=30; break;
-            case 'сорок': b+=40; break;
-            case 'пятьдесят': b+=50; break;
-            case 'шестьдесят': b+=60; break;
-            case 'семьдесят': b+=70; break;
-            case 'восемьдесят': b+=80; break;
-            case 'девяносто': b+=90; break;
-        }
-        switch(a[2])
-        {
-            case 'один': b+=1; break;
-            case 'два': b+=2; break;
-            case 'три': b+=3; break;
-            case 'четыре': b+=4; break;
-            case 'пять': b+=5; break;
-            case 'шесть': b+=6; break;
-            case 'семь': b+=7; break;
-            case 'восемь': b+=8; break;
-            case 'девять': b+=9; break;
-            default: return'try again';
-        }
-    }
-    else if(a.length == 2){
-        switch(a[0]){
-            case 'сто': b+=100; break;
-            case 'двести': b+=200; break;
-            case 'триста': b+=300; break;
-            case 'четыреста': b+=400; break;
-            case 'пятьсот': b+=500; break;
-            case 'шестьсот': b+=600; break;
-            case 'семьсот': b+=700; break;
-            case 'восемьсот': b+=800; break;
-            case 'девятьсот': b+=900; break;
-            case 'двадцать': b+=20; break;
-            case 'тридцать': b+=30; break;
-            case 'сорок': b+=40; break;
-            case 'пятьдесят': b+=50; break;
-            case 'шестьдесят': b+=60; break;
-            case 'семьдесят': b+=70; break;
-            case 'восемьдесят': b+=80; break;
-            case 'девяносто': b+=90; break;
-        }
-        switch(a[1]){
-            case 'двадцать': b+=20;break;
-            case 'тридцать': b+=30; break;
-            case 'сорок': b+=40; break;
-            case 'пятьдесят': b+=50; break;
-            case 'шестьдесят': b+=60; break;
-            case 'семьдесят': b+=70; break;
-            case 'восемьдесят': b+=80; break;
-            case 'девяносто': b+=90; break;
-            case 'один': b+=1; break;
-            case 'два': b+=2; break;
-            case 'три': b+=3; break;
-            case 'четыре': b+=4; break;
-            case 'пять': b+=5; break;
-            case 'шесть': b+=6; break;
-            case 'семь': b+=7; break;
-            case 'восемь': b+=8; break;
-            case 'девять': b+=9; break;
-            case 'одинадцать': b+=11;break;
-            case 'двенадцать': b+=12; break;
-            case 'тринадцать': b+=13; break;
-            case 'четырнадцать': b+=14; break;
-            case 'пятнадцать': b+=15; break;
-            case 'шестнадцать': b+=16; break;
-            case 'семнадцать': b+=17; break;
-            case 'восемнадцать': b+=18; break;
-            case 'девятнадцать': b+=19; break;
-            default: return 'try again';
-            }
-        }
-        else if(a.length == 1){
-            switch(a[0]){
-            case 'сто': b+=100; break;
-            case 'двести': b+=200; break;
-            case 'триста': b+=300; break;
-            case 'четыреста': b+=400; break;
-            case 'пятьсот': b+=500; break;
-            case 'шестьсот': b+=600; break;
-            case 'семьсот': b+=700; break;
-            case 'восемьсот': b+=800; break;
-            case 'девятьсот': b+=900; break;
-            case 'десять': b+=10; break;
-            case 'двадцать': b+=20; break;
-            case 'тридцать': b+=30; break;
-            case 'сорок': b+=40; break;
-            case 'пятьдесят': b+=50; break;
-            case 'шестьдесят': b+=60; break;
-            case 'семьдесят': b+=70; break;
-            case 'восемьдесят': b+=80; break;
-            case 'девяносто': b+=90; break;
-            case 'одинадцать': b+=11;break;
-            case 'двенадцать': b+=12; break;
-            case 'тринадцать': b+=13; break;
-            case 'четырнадцать': b+=14; break;
-            case 'пятнадцать': b+=15; break;
-            case 'шестнадцать': b+=16; break;
-            case 'семнадцать': b+=17; break;
-            case 'восемнадцать': b+=18; break;
-            case 'девятнадцать': b+=19; break;
-            case 'один': b+=1; break;
-            case 'два': b+=2; break;
-            case 'три': b+=3; break;
-            case 'четыре': b+=4; break;
-            case 'пять': b+=5; break;
-            case 'шесть': b+=6; break;
-            case 'семь': b+=7; break;
-            case 'восемь': b+=8; break;
-            case 'девять': b+=9; break;
-            case 'ноль': b=0; break;
-            default: return 'try again';
-            }
-        }
-        else{
-            return 'try again'
-        }
-        return b
-}
+//     if(a.length == 3){
+//         switch (a[0])
+//         {
+//             case 'сто': b+=100; break;
+//             case 'двести': b+=200; break;
+//             case 'триста': b+=300; break;
+//             case 'четыреста': b+=400; break;
+//             case 'пятьсот': b+=500; break;
+//             case 'шестьсот': b+=600; break;
+//             case 'семьсот': b+=700; break;
+//             case 'восемьсот': b+=800; break;
+//             case 'девятьсот': b+=900; break;
+//         }
+//         switch(a[1])
+//         {
+//             case 'двадцать': b+=20; break;
+//             case 'тридцать': b+=30; break;
+//             case 'сорок': b+=40; break;
+//             case 'пятьдесят': b+=50; break;
+//             case 'шестьдесят': b+=60; break;
+//             case 'семьдесят': b+=70; break;
+//             case 'восемьдесят': b+=80; break;
+//             case 'девяносто': b+=90; break;
+//         }
+//         switch(a[2])
+//         {
+//             case 'один': b+=1; break;
+//             case 'два': b+=2; break;
+//             case 'три': b+=3; break;
+//             case 'четыре': b+=4; break;
+//             case 'пять': b+=5; break;
+//             case 'шесть': b+=6; break;
+//             case 'семь': b+=7; break;
+//             case 'восемь': b+=8; break;
+//             case 'девять': b+=9; break;
+//             default: return'try again';
+//         }
+//     }
+//     else if(a.length == 2){
+//         switch(a[0]){
+//             case 'сто': b+=100; break;
+//             case 'двести': b+=200; break;
+//             case 'триста': b+=300; break;
+//             case 'четыреста': b+=400; break;
+//             case 'пятьсот': b+=500; break;
+//             case 'шестьсот': b+=600; break;
+//             case 'семьсот': b+=700; break;
+//             case 'восемьсот': b+=800; break;
+//             case 'девятьсот': b+=900; break;
+//             case 'двадцать': b+=20; break;
+//             case 'тридцать': b+=30; break;
+//             case 'сорок': b+=40; break;
+//             case 'пятьдесят': b+=50; break;
+//             case 'шестьдесят': b+=60; break;
+//             case 'семьдесят': b+=70; break;
+//             case 'восемьдесят': b+=80; break;
+//             case 'девяносто': b+=90; break;
+//         }
+//         switch(a[1]){
+//             case 'двадцать': b+=20;break;
+//             case 'тридцать': b+=30; break;
+//             case 'сорок': b+=40; break;
+//             case 'пятьдесят': b+=50; break;
+//             case 'шестьдесят': b+=60; break;
+//             case 'семьдесят': b+=70; break;
+//             case 'восемьдесят': b+=80; break;
+//             case 'девяносто': b+=90; break;
+//             case 'один': b+=1; break;
+//             case 'два': b+=2; break;
+//             case 'три': b+=3; break;
+//             case 'четыре': b+=4; break;
+//             case 'пять': b+=5; break;
+//             case 'шесть': b+=6; break;
+//             case 'семь': b+=7; break;
+//             case 'восемь': b+=8; break;
+//             case 'девять': b+=9; break;
+//             case 'одинадцать': b+=11;break;
+//             case 'двенадцать': b+=12; break;
+//             case 'тринадцать': b+=13; break;
+//             case 'четырнадцать': b+=14; break;
+//             case 'пятнадцать': b+=15; break;
+//             case 'шестнадцать': b+=16; break;
+//             case 'семнадцать': b+=17; break;
+//             case 'восемнадцать': b+=18; break;
+//             case 'девятнадцать': b+=19; break;
+//             default: return 'try again';
+//             }
+//         }
+//         else if(a.length == 1){
+//             switch(a[0]){
+//             case 'сто': b+=100; break;
+//             case 'двести': b+=200; break;
+//             case 'триста': b+=300; break;
+//             case 'четыреста': b+=400; break;
+//             case 'пятьсот': b+=500; break;
+//             case 'шестьсот': b+=600; break;
+//             case 'семьсот': b+=700; break;
+//             case 'восемьсот': b+=800; break;
+//             case 'девятьсот': b+=900; break;
+//             case 'десять': b+=10; break;
+//             case 'двадцать': b+=20; break;
+//             case 'тридцать': b+=30; break;
+//             case 'сорок': b+=40; break;
+//             case 'пятьдесят': b+=50; break;
+//             case 'шестьдесят': b+=60; break;
+//             case 'семьдесят': b+=70; break;
+//             case 'восемьдесят': b+=80; break;
+//             case 'девяносто': b+=90; break;
+//             case 'одинадцать': b+=11;break;
+//             case 'двенадцать': b+=12; break;
+//             case 'тринадцать': b+=13; break;
+//             case 'четырнадцать': b+=14; break;
+//             case 'пятнадцать': b+=15; break;
+//             case 'шестнадцать': b+=16; break;
+//             case 'семнадцать': b+=17; break;
+//             case 'восемнадцать': b+=18; break;
+//             case 'девятнадцать': b+=19; break;
+//             case 'один': b+=1; break;
+//             case 'два': b+=2; break;
+//             case 'три': b+=3; break;
+//             case 'четыре': b+=4; break;
+//             case 'пять': b+=5; break;
+//             case 'шесть': b+=6; break;
+//             case 'семь': b+=7; break;
+//             case 'восемь': b+=8; break;
+//             case 'девять': b+=9; break;
+//             case 'ноль': b=0; break;
+//             default: return 'try again';
+//             }
+//         }
+//         else{
+//             return 'try again'
+//         }
+//         return b
+// }
 
 // console.log(getNumFromStr('двести двадцать три'))
 // console.log(getNumFromStr('девятьсот тридцать пять'))
